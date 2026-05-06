@@ -10,7 +10,7 @@ There are two groups `A` and `B`. And there are two permissions granting `view-m
 This works fine as long as there is only one group. 
 But as soon as you add a child group `/A/AA` the `view-members` for the users in the child-group `AA` works only on `users/{id}` not `users?username=..` this looks like wrong and not as documented:
 
-> https://www.keycloak.org/docs/latest/server_admin/#_fine_grained_permissions
+> https://www.keycloak.org/docs/latest/server_admin/#understanding-the-scopes-of-access
 > | Scope | Description | Also granted by |
 > | -- | -- | -- |
 > | view | Defines if a realm administrator can view users. This scope should be set whenever you want to make users available from queries. | view-members |
