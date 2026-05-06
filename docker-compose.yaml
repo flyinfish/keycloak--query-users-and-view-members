@@ -1,0 +1,19 @@
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.6.1
+    ports:
+      - "8080:8080"
+      - "9000:9000"
+      - "8787:8787"
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+      - DEBUG=true
+      - DEBUG_PORT=0.0.0.0:8787
+    volumes:
+      - ./import:/opt/keycloak/data/import
+    command:
+      - start-dev
+      - --import-realm
+      - --log-level=INFO,org.keycloak:debug,org.keycloak.transaction:info,org.keycloak.authorization.policy.provider:info
+      - --debug
