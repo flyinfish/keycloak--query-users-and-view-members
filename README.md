@@ -15,6 +15,8 @@ But as soon as you add a child group `/A/AA` the `view-members` for the users in
 > | -- | -- | -- |
 > | view | Defines if a realm administrator can view users. This scope should be set whenever you want to make users available from queries. | view-members |
 
+the same behaviour is in ui when you log in to http://localhost:8080/admin/dev/console/#/dev/users (user/pw view-a-1/view-a-1)
+
 
 ## verify 
 
